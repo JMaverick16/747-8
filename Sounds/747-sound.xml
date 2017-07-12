@@ -1,0 +1,1193 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+<fx>
+	
+	<switch>
+		<name>switch</name>
+		<mode>once</mode>
+		<path>FL2070/747_button.wav</path>
+		<condition>
+			<property>sim/sound/click</property>
+		</condition>
+		<volume>
+			<factor>1</factor>
+		</volume>
+	</switch>
+
+	<cab>
+		<name>cabin</name>
+		<path>FL2070/747_cabin.wav</path>
+		<mode>looped</mode>
+	</cab>
+	
+	<eng1>
+		<name>idle_eng1</name>
+		<path>FL2070/GENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+	</eng1>
+	
+	<eng1>
+		<name>idlehum_eng1</name>
+		<path>FL2070/GENx_idlehum.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.01</factor>
+			<max>0.36</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng1>
+	
+	<eng1>
+		<name>spool_eng1</name>
+		<path>FL2070/GENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng1>
+	
+	<eng1>
+		<name>spool2_eng1</name>
+		<path>FL2070/GENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng1>
+	
+	<eng1>
+		<name>spoolwhine_eng1</name>
+		<path>FL2070/GENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+	</eng1>
+	
+	<eng1>
+		<name>xidle_eng1</name>
+		<path>FL2070/xGENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>160</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng1>
+	
+	<eng1>
+		<name>xblast_eng1</name>
+		<path>FL2070/xGENx_blast.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng1>
+	
+	<eng1>
+		<name>xspool_eng1</name>
+		<path>FL2070/xGENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.07</outer-gain>
+		</orientation>
+	</eng1>
+	
+	<eng1>
+		<name>xspool2_eng1</name>
+		<path>FL2070/xGENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.12</outer-gain>
+		</orientation>
+	</eng1>
+	
+	<eng1>
+		<name>xspoolwhine_eng1</name>
+		<path>FL2070/xGENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>168</outer-angle>
+			<outer-gain>0.05</outer-gain>
+		</orientation>
+	</eng1>
+	
+	<eng1>
+		<name>xblast2_eng1</name>
+		<path>FL2070/xGENx_blast2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[0]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.02</factor>
+			<offset>-1.2</offset>
+			<min>1.2</min>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng1>
+	
+	<eng2>
+		<name>idle_eng2</name>
+		<path>FL2070/GENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+	</eng2>
+	
+	<eng2>
+		<name>idlehum_eng2</name>
+		<path>FL2070/GENx_idlehum.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.01</factor>
+			<max>0.36</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng2>
+	
+	<eng2>
+		<name>spool_eng2</name>
+		<path>FL2070/GENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng2>
+	
+	<eng2>
+		<name>spool2_eng2</name>
+		<path>FL2070/GENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng2>
+	
+	<eng2>
+		<name>spoolwhine_eng2</name>
+		<path>FL2070/GENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+	</eng2>
+	
+	<eng2>
+		<name>xidle_eng2</name>
+		<path>FL2070/xGENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>160</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng2>
+	
+	<eng2>
+		<name>xblast_eng2</name>
+		<path>FL2070/xGENx_blast.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng2>
+	
+	<eng2>
+		<name>xspool_eng2</name>
+		<path>FL2070/xGENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.07</outer-gain>
+		</orientation>
+	</eng2>
+	
+	<eng2>
+		<name>xspool2_eng2</name>
+		<path>FL2070/xGENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.12</outer-gain>
+		</orientation>
+	</eng2>
+	
+	<eng2>
+		<name>xspoolwhine_eng2</name>
+		<path>FL2070/xGENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>168</outer-angle>
+			<outer-gain>0.05</outer-gain>
+		</orientation>
+	</eng2>
+	
+	<eng2>
+		<name>xblast2_eng2</name>
+		<path>FL2070/xGENx_blast2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[1]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.02</factor>
+			<offset>-1.2</offset>
+			<min>1.2</min>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng2>
+	
+	<eng3>
+		<name>idle_eng3</name>
+		<path>FL2070/GENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+	</eng3>
+	
+	<eng3>
+		<name>idlehum_eng3</name>
+		<path>FL2070/GENx_idlehum.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.01</factor>
+			<max>0.36</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng3>
+	
+	<eng3>
+		<name>spool_eng3</name>
+		<path>FL2070/GENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng3>
+	
+	<eng3>
+		<name>spool2_eng3</name>
+		<path>FL2070/GENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng3>
+	
+	<eng3>
+		<name>spoolwhine_eng3</name>
+		<path>FL2070/GENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+	</eng3>
+	
+	<eng3>
+		<name>xidle_eng3</name>
+		<path>FL2070/xGENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>160</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng3>
+	
+	<eng3>
+		<name>xblast_eng3</name>
+		<path>FL2070/xGENx_blast.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng3>
+	
+	<eng3>
+		<name>xspool_eng3</name>
+		<path>FL2070/xGENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.07</outer-gain>
+		</orientation>
+	</eng3>
+	
+	<eng3>
+		<name>xspool2_eng3</name>
+		<path>FL2070/xGENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.12</outer-gain>
+		</orientation>
+	</eng3>
+	
+	<eng3>
+		<name>xspoolwhine_eng3</name>
+		<path>FL2070/xGENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>168</outer-angle>
+			<outer-gain>0.05</outer-gain>
+		</orientation>
+	</eng3>
+	
+	<eng3>
+		<name>xblast2_eng3</name>
+		<path>FL2070/xGENx_blast2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[2]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.02</factor>
+			<offset>-1.2</offset>
+			<min>1.2</min>
+		</volume>
+		<pitch>
+			<property>engines/engine[2]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng3>
+	
+	<eng4>
+		<name>idle_eng4</name>
+		<path>FL2070/GENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+	</eng4>
+	
+	<eng4>
+		<name>idlehum_eng4</name>
+		<path>FL2070/GENx_idlehum.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.01</factor>
+			<max>0.36</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng4>
+	
+	<eng4>
+		<name>spool_eng4</name>
+		<path>FL2070/GENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng4>
+	
+	<eng4>
+		<name>spool2_eng4</name>
+		<path>FL2070/GENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+	</eng4>
+	
+	<eng4>
+		<name>spoolwhine_eng4</name>
+		<path>FL2070/GENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<property>sim/current-view/internal</property>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+	</eng4>
+	
+	<eng4>
+		<name>xidle_eng4</name>
+		<path>FL2070/xGENx_idle.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>160</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng4>
+	
+	<eng4>
+		<name>xblast_eng4</name>
+		<path>FL2070/xGENx_blast.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.01</factor>
+			<max>0.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng4>
+	
+	<eng4>
+		<name>xspool_eng4</name>
+		<path>FL2070/xGENx_spool.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.4</offset>
+			<min>5.4</min>
+			<max>6.4</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.07</outer-gain>
+		</orientation>
+	</eng4>
+	
+	<eng4>
+		<name>xspool2_eng4</name>
+		<path>FL2070/xGENx_spool2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.05</factor>
+			<offset>-3.2</offset>
+			<min>3.2</min>
+			<max>4.2</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.015</factor>
+			<offset>-0.3</offset>
+			<min>0.3</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0.12</outer-gain>
+		</orientation>
+	</eng4>
+	
+	<eng4>
+		<name>xspoolwhine_eng4</name>
+		<path>FL2070/xGENx_spoolwhine.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.1</factor>
+			<offset>-5.5</offset>
+			<min>5.5</min>
+			<max>6.5</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.01</factor>
+			<offset>0</offset>
+			<min>0.64</min>
+		</pitch>
+			
+		<orientation>
+			<x>-1</x>
+			<inner-angle>045</inner-angle>
+			<outer-angle>168</outer-angle>
+			<outer-gain>0.05</outer-gain>
+		</orientation>
+	</eng4>
+	
+	<eng4>
+		<name>xblast2_eng4</name>
+		<path>FL2070/xGENx_blast2.wav</path>
+		<mode>looped</mode>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+			<property>engines/engine[3]/running</property>
+		</condition>
+		
+		<volume>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.02</factor>
+			<offset>-1.2</offset>
+			<min>1.2</min>
+		</volume>
+		<pitch>
+			<property>engines/engine[3]/n1</property>
+			<factor>0.005</factor>
+			<offset>0.74</offset>
+		</pitch>
+			
+		<orientation>
+			<x>1</x>
+			<inner-angle>050</inner-angle>
+			<outer-angle>150</outer-angle>
+			<outer-gain>0</outer-gain>
+		</orientation>
+	</eng4>
+
+</fx>
+</PropertyList>
