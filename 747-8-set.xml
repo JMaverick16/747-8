@@ -38,12 +38,12 @@
 		<aero>747-8-yasim</aero>
 
 		<startup>
-			<splash-texture>Aircraft/747-8/splash-8i.png</splash-texture>
+			<splash-texture>Aircraft/747-8/splash-8.png</splash-texture>
 		</startup>
 
 		<!-- Default livery set up - http://wiki.flightgear.org/index.php/Livery_over_MP -->
 		<model>
-			<path>Aircraft/747-8/Models/747-8i.xml</path>
+			<path>Aircraft/747-8/Models/747-8.xml</path>
 			<variant type="int">1</variant>
 			<livery>
 				<file type="string">Default</file>

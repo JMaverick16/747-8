@@ -40,7 +40,7 @@
 
 		<aero>747-8-f-yasim</aero>
 
-		<variant-of>747-8i</variant-of>
+		<variant-of>747-8</variant-of>
 
 		<startup>
 			<splash-texture>Aircraft/747-8/splash-8F.png</splash-texture>
@@ -48,7 +48,7 @@
 
 		<!-- Default livery set up - http://wiki.flightgear.org/index.php/Livery_over_MP -->
 		<model>
-			<path>Aircraft/747-8/Models/747-8F.xml</path>
+			<path>Aircraft/747-8/Models/747-8(F).xml</path>
 			<variant type="int">0</variant>
 			<livery>
 				<file type="string">Default</file>

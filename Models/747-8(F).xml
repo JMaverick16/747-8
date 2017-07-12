@@ -2,7 +2,7 @@
 <PropertyList>
 
  <!-- Define o modelo 3d da aeronave -->
- <path>747-8i.ac</path>
+ <path>747-8(F).ac</path>
  
  <!-- REFERENCE / REFERENCIA
  
@@ -13,36 +13,25 @@
 -->
     <nasal>
 	<load>
-            var livery_update = aircraft.livery_update.new("Aircraft/747-8/Models/Liveries/748I", 10);
+            var livery_update = aircraft.livery_update.new("Aircraft/747-8/Models/Liveries/748F", 10);
         </load>
 
         <unload>
             livery_update.stop();
         </unload>
-	<load>
-	    var model = cmdarg();
-	    model.getnode("door[0]/position-x-m",1).setValue(-24.58);
-	    model.getnode("door[0]/position-y-m",1).setValue(-3.29);
-	    model.getnode("door[0]/position-z-m",1).setValue(-0.42);
-	    model.getnode("door[0]/jetway-hood-deg",1).setValue(6);
-	    model.getnode("door[1]/position-x-m",1).setValue(-24.58);
-	    model.getnode("door[1]/position-y-m",1).setValue(-3.29);
-	    model.getnode("door[1]/position-z-m",1).setValue(-0.42);
-	    model.getnode("door[1]/jetway-hood-deg",1).setValue(6);
-	</load>
     </nasal>
     
      <animation>
         <type>material</type>
-         <object-name>fuselage_1</object-name>
+         <object-name>fuselage</object-name>
          <object-name>nosecone</object-name>
          <object-name>VHFantenna</object-name>
          <object-name>antenna2</object-name>
          <object-name>antenna3</object-name>
          <object-name>antenna_bot</object-name>
          <object-name>satcom</object-name>
-         <object-name>cargodoor1.001</object-name>
-	 <object-name>NLG_L_lg</object-name>
+         <object-name>cargodoor1</object-name>
+         <object-name>NLG_L_lg</object-name>
          <object-name>NLG_R_lg</object-name>
          <object-name>NLG_L_sm</object-name>
          <object-name>NLG_R_sm</object-name>
@@ -62,7 +51,7 @@
          <object-name>rudder_1</object-name>
          <property-base>sim/model/livery</property-base>
          <texture-prop>texture</texture-prop>
-      <texture>fuselage.png</texture>
+      <texture>freighter.png</texture>
     </animation>
     
     <animation>
@@ -107,7 +96,7 @@
       <texture>turbofan.png</texture>
     </animation>
 
-    <animation>
+     <animation>
         <type>material</type>
          <!-- Left wing -->
          <object-name>wing</object-name>
@@ -179,8 +168,7 @@
 	<path>Aircraft/747-8/Models/Service/Fueltender/fueltender.xml</path>
 </model>
 
-
-
+<!-- Landing Gear -->
 <model>
 	<path>Aircraft/747-8/Models/747-8i_gear.xml</path> 
 </model>
@@ -206,6 +194,7 @@
 <!-- ###### -->
 
 <!-- LANDING LIGHTS -->
+
 <model>
 	<path>Aircraft/747-8/Models/Lights/landinglights/landing_light_R.xml</path>
 	<name>LandingLight.Outbd.Left</name>
@@ -264,7 +253,7 @@
 	<offsets>
 		<x-m>-20.314</x-m>
 		<y-m>0</y-m>
-		<z-m>5.1841</z-m>
+		<z-m>5.178</z-m>
 	</offsets>
 </model>
 
@@ -437,7 +426,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>NLG_L_lg.in</object-name>
-        <object-name>NLG_L_lg</object-name>
+	<object-name>NLG_L_lg</object-name>
 	<property>gear/gear[0]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -470,7 +459,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>NLG_R_lg.in</object-name>
-        <object-name>NLG_R_lg</object-name>
+	<object-name>NLG_R_lg</object-name>
 	<property>gear/gear[0]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -503,7 +492,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>NLG_L_sm.in</object-name>
-        <object-name>NLG_L_sm</object-name>
+	<object-name>NLG_L_sm</object-name>
 	<property>gear/gear[0]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -536,7 +525,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>NLG_R_sm.in</object-name>
-        <object-name>NLG_R_sm</object-name>
+	<object-name>NLG_R_sm</object-name>
 	<property>gear/gear[0]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -571,9 +560,9 @@
 <animation>
 	<type>rotate</type>
 	<object-name>FLG_FL_in</object-name>
-        <object-name>FLG_FL_out</object-name>
-        <object-name>FLG_FL_in.in</object-name>
-        <object-name>FLG_FL_out.in</object-name>
+	<object-name>FLG_FL_out</object-name>
+	<object-name>FLG_FL_in.in</object-name>
+	<object-name>FLG_FL_out.in</object-name>
 	<property>gear/gear[2]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -606,9 +595,9 @@
 <animation>
 	<type>rotate</type>
 	<object-name>FLG_FR_in</object-name>
-        <object-name>FLG_FR_out</object-name>
-        <object-name>FLG_FR_in.in</object-name>
-        <object-name>FLG_FR_out.in</object-name>
+	<object-name>FLG_FR_out</object-name>
+	<object-name>FLG_FR_in.in</object-name>
+	<object-name>FLG_FR_out.in</object-name>
 	<property>gear/gear[3]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -641,7 +630,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>FLG_FL_out</object-name>
-        <object-name>FLG_FL_out.in</object-name>
+	<object-name>FLG_FL_out.in</object-name>
 	<property>gear/gear[2]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -674,7 +663,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>FLG_FR_out</object-name>
-        <object-name>FLG_FR_out.in</object-name>
+	<object-name>FLG_FR_out.in</object-name>
 	<property>gear/gear[3]/position-norm</property>
 	<interpolation>
 		<entry>
@@ -705,239 +694,239 @@
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_ML_in</object-name>
-        <object-name>FLG_ML_out</object-name>
-        <object-name>FLG_ML_in.in</object-name>
-        <object-name>FLG_ML_out.in</object-name>
-        <property>gear/gear[2]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.150</ind>
-                        <dep>-135</dep>
-                </entry>
-                <entry>
-                        <ind>0.65</ind>
-                        <dep>-135</dep>
-                </entry>
-                <entry>
-                        <ind>1.0</ind>
-                        <dep>0</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 2.435</x1-m>
-                <y1-m>-2.785</y1-m>
-                <z1-m>-2.621</z1-m>
-                <x2-m> 4.861</x2-m>
-                <y2-m>-2.785</y2-m>
-                <z2-m>-2.621</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_ML_in</object-name>
+	<object-name>FLG_ML_out</object-name>
+	<object-name>FLG_ML_in.in</object-name>
+	<object-name>FLG_ML_out.in</object-name>
+	<property>gear/gear[2]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.150</ind>
+			<dep>-135</dep>
+		</entry>
+		<entry>
+			<ind>0.65</ind>
+			<dep>-135</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 2.435</x1-m>
+		<y1-m>-2.785</y1-m>
+		<z1-m>-2.621</z1-m>
+		<x2-m> 4.861</x2-m>
+		<y2-m>-2.785</y2-m>
+		<z2-m>-2.621</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_MR_in</object-name>
-        <object-name>FLG_MR_out</object-name>
-        <object-name>FLG_MR_in.in</object-name>
-        <object-name>FLG_MR_out.in</object-name>
-        <property>gear/gear[3]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.150</ind>
-                        <dep>135</dep>
-                </entry>
-                <entry>
-                        <ind>0.65</ind>
-                        <dep>135</dep>
-                </entry>
-                <entry>
-                        <ind>1.0</ind>
-                        <dep>0</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 2.435</x1-m>
-                <y1-m> 2.785</y1-m>
-                <z1-m>-2.621</z1-m>
-                <x2-m> 4.861</x2-m>
-                <y2-m> 2.785</y2-m>
-                <z2-m>-2.621</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_MR_in</object-name>
+	<object-name>FLG_MR_out</object-name>
+	<object-name>FLG_MR_in.in</object-name>
+	<object-name>FLG_MR_out.in</object-name>
+	<property>gear/gear[3]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.150</ind>
+			<dep>135</dep>
+		</entry>
+		<entry>
+			<ind>0.65</ind>
+			<dep>135</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 2.435</x1-m>
+		<y1-m> 2.785</y1-m>
+		<z1-m>-2.621</z1-m>
+		<x2-m> 4.861</x2-m>
+		<y2-m> 2.785</y2-m>
+		<z2-m>-2.621</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_ML_in</object-name>
-        <object-name>FLG_ML_in.in</object-name>
-        <property>gear/gear[2]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.10</ind>
-                        <dep>110</dep>
-                </entry>
-                <entry>
-                        <ind>0.70</ind>
-                        <dep>110</dep>
-                </entry>
-                <entry>
-                        <ind>1.0</ind>
-                        <dep>0</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 2.427</x1-m>
-                <y1-m>-1.918</y1-m>
-                <z1-m>-2.791</z1-m>
-                <x2-m> 4.861</x2-m>
-                <y2-m>-1.918</y2-m>
-                <z2-m>-2.791</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_ML_in</object-name>
+	<object-name>FLG_ML_in.in</object-name>
+	<property>gear/gear[2]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.10</ind>
+			<dep>110</dep>
+		</entry>
+		<entry>
+			<ind>0.70</ind>
+			<dep>110</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 2.427</x1-m>
+		<y1-m>-1.918</y1-m>
+		<z1-m>-2.791</z1-m>
+		<x2-m> 4.861</x2-m>
+		<y2-m>-1.918</y2-m>
+		<z2-m>-2.791</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_MR_in</object-name>
-        <object-name>FLG_MR_in.in</object-name>
-        <property>gear/gear[3]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.10</ind>
-                        <dep>-110</dep>
-                </entry>
-                <entry>
-                        <ind>0.70</ind>
-                        <dep>-110</dep>
-                </entry>
-                <entry>
-                        <ind>1.0</ind>
-                        <dep>0</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 2.427</x1-m>
-                <y1-m> 1.918</y1-m>
-                <z1-m>-2.791</z1-m>
-                <x2-m> 4.861</x2-m>
-                <y2-m> 1.918</y2-m>
-                <z2-m>-2.791</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_MR_in</object-name>
+	<object-name>FLG_MR_in.in</object-name>
+	<property>gear/gear[3]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.10</ind>
+			<dep>-110</dep>
+		</entry>
+		<entry>
+			<ind>0.70</ind>
+			<dep>-110</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 2.427</x1-m>
+		<y1-m> 1.918</y1-m>
+		<z1-m>-2.791</z1-m>
+		<x2-m> 4.861</x2-m>
+		<y2-m> 1.918</y2-m>
+		<z2-m>-2.791</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_RR_in</object-name>
-        <object-name>FLG_RR_in.in</object-name>
-        <property>gear/gear[3]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.25</ind>
-                        <dep>-85</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 3.644</x1-m>
-                <y1-m> 0.300</y1-m>
-                <z1-m>-2.919</z1-m>
-                <x2-m> 6.061</x2-m>
-                <y2-m> 0.300</y2-m>
-                <z2-m>-2.919</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_RR_in</object-name>
+	<object-name>FLG_RR_in.in</object-name>
+	<property>gear/gear[3]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.25</ind>
+			<dep>-85</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 3.644</x1-m>
+		<y1-m> 0.300</y1-m>
+		<z1-m>-2.919</z1-m>
+		<x2-m> 6.061</x2-m>
+		<y2-m> 0.300</y2-m>
+		<z2-m>-2.919</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_RL_in</object-name>
-        <object-name>FLG_RL_in.in</object-name>
-        <property>gear/gear[2]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.25</ind>
-                        <dep>85</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 3.644</x1-m>
-                <y1-m>-0.300</y1-m>
-                <z1-m>-2.919</z1-m>
-                <x2-m> 6.061</x2-m>
-                <y2-m>-0.300</y2-m>
-                <z2-m>-2.919</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_RL_in</object-name>
+	<object-name>FLG_RL_in.in</object-name>
+	<property>gear/gear[2]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.25</ind>
+			<dep>85</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 3.644</x1-m>
+		<y1-m>-0.300</y1-m>
+		<z1-m>-2.919</z1-m>
+		<x2-m> 6.061</x2-m>
+		<y2-m>-0.300</y2-m>
+		<z2-m>-2.919</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_RL_out</object-name>
-        <object-name>FLG_RL_out.in</object-name>
-        <property>gear/gear[2]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.25</ind>
-                        <dep>-95</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 4.861</x1-m>
-                <y1-m>-2.785</y1-m>
-                <z1-m>-2.621</z1-m>
-                <x2-m> 6.061</x2-m>
-                <y2-m>-2.785</y2-m>
-                <z2-m>-2.621</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_RL_out</object-name>
+	<object-name>FLG_RL_out.in</object-name>
+	<property>gear/gear[2]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.25</ind>
+			<dep>-95</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 4.861</x1-m>
+		<y1-m>-2.785</y1-m>
+		<z1-m>-2.621</z1-m>
+		<x2-m> 6.061</x2-m>
+		<y2-m>-2.785</y2-m>
+		<z2-m>-2.621</z2-m>
+	</axis>
 </animation>
 
 <animation>
-        <type>rotate</type>
-        <object-name>FLG_RR_out</object-name>
-        <object-name>FLG_RR_out.in</object-name>
-        <property>gear/gear[3]/position-norm</property>
-        <interpolation>
-                <entry>
-                        <ind>0.0</ind>
-                        <dep>0</dep>
-                </entry>
-                <entry>
-                        <ind>0.25</ind>
-                        <dep>95</dep>
-                </entry>
-        </interpolation>
-        <axis>
-                <x1-m> 4.861</x1-m>
-                <y1-m> 2.785</y1-m>
-                <z1-m>-2.621</z1-m>
-                <x2-m> 6.061</x2-m>
-                <y2-m> 2.785</y2-m>
-                <z2-m>-2.621</z2-m>
-        </axis>
+	<type>rotate</type>
+	<object-name>FLG_RR_out</object-name>
+	<object-name>FLG_RR_out.in</object-name>
+	<property>gear/gear[3]/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.25</ind>
+			<dep>95</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x1-m> 4.861</x1-m>
+		<y1-m> 2.785</y1-m>
+		<z1-m>-2.621</z1-m>
+		<x2-m> 6.061</x2-m>
+		<y2-m> 2.785</y2-m>
+		<z2-m>-2.621</z2-m>
+	</axis>
 </animation>
 
 <!-- ###### -->
@@ -1786,7 +1775,7 @@
   <type>rotate</type>
   <object-name>aileron_L</object-name>
         <condition>
-			<or>
+	    <or>
             	<less-than>
             	    <property>velocities/mach</property>
             	    <value>0.59</value>
@@ -1795,7 +1784,7 @@
             	    <property>velocities/airspeed-kt</property>
             	    <value>278</value>
             	</less-than>
-			</or>
+	    </or>
         </condition>
   <property>surface-positions/left-aileron-pos-norm</property>
   <factor> 30</factor>
@@ -1813,7 +1802,7 @@
   <type>rotate</type>
   <object-name>aileron_R</object-name>
         <condition>
-			<or>
+	    <or>
             	<less-than>
             	    <property>velocities/mach</property>
             	    <value>0.59</value>
@@ -1822,7 +1811,7 @@
             	    <property>velocities/airspeed-kt</property>
             	    <value>278</value>
             	</less-than>
-			</or>
+	    </or>
         </condition>
   <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-30</factor>
@@ -1836,29 +1825,29 @@
   </axis>
  </animation>
 
-  <!-- droop with flaps --> 
+  <!-- droop with flaps -->
   <animation>
   <type>rotate</type>
   <object-name>aileron_L</object-name>
   <property>surface-positions/flap-pos-norm</property>
-		  <interpolation>
-		    <entry>
-		      <ind>0.00</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.666</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.75</ind>
-		      <dep>5</dep>
-		    </entry>
-		    <entry>
-		      <ind>1.00</ind>
-		      <dep>15</dep>
-		    </entry>
-		  </interpolation>
+                  <interpolation>
+                    <entry>
+                      <ind>0.00</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.666</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.75</ind>
+                      <dep>5</dep>
+                    </entry>
+                    <entry>
+                      <ind>1.00</ind>
+                      <dep>15</dep>
+                    </entry>
+                  </interpolation>
   <axis>
      <x1-m> 16.4032</x1-m>
      <y1-m>-28.048</y1-m>
@@ -1873,24 +1862,24 @@
   <type>rotate</type>
   <object-name>aileron_R</object-name>
   <property>surface-positions/flap-pos-norm</property>
-		  <interpolation>
-		    <entry>
-		      <ind>0.00</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.666</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.75</ind>
-		      <dep>-5</dep>
-		    </entry>
-		    <entry>
-		      <ind>1.00</ind>
-		      <dep>-15</dep>
-		    </entry>
-		  </interpolation>
+                  <interpolation>
+                    <entry>
+                      <ind>0.00</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.666</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.75</ind>
+                      <dep>-5</dep>
+                    </entry>
+                    <entry>
+                      <ind>1.00</ind>
+                      <dep>-15</dep>
+                    </entry>
+                  </interpolation>
   <axis>
      <x1-m> 16.4032</x1-m>
      <y1-m>28.048</y1-m>
@@ -1906,16 +1895,16 @@
   <type>rotate</type>
   <object-name>aileron_int_L</object-name>
         <condition>
-	    <or>
-            	<less-than>
-            	    <property>velocities/mach</property>
-            	    <value>0.59</value>
-            	</less-than>
-            	<less-than>
-            	    <property>velocities/airspeed-kt</property>
-            	    <value>278</value>
-            	</less-than>
-	    </or>
+            <or>
+                <less-than>
+                    <property>velocities/mach</property>
+                    <value>0.59</value>
+                </less-than>
+                <less-than>
+                    <property>velocities/airspeed-kt</property>
+                    <value>278</value>
+                </less-than>
+            </or>
         </condition>
   <property>surface-positions/left-aileron-pos-norm</property>
   <factor> 30</factor>
@@ -1932,16 +1921,16 @@
   <type>rotate</type>
   <object-name>aileron_int_L</object-name>
         <condition>
-	    <or>
-            	<greater-than-equals>
-            	    <property>velocities/mach</property>
-            	    <value>0.59</value>
-            	</greater-than-equals>
-            	<greater-than-equals>
-            	    <property>velocities/airspeed-kt</property>
-            	    <value>278</value>
-            	</greater-than-equals>
-	    </or>
+            <or>
+                <greater-than-equals>
+                    <property>velocities/mach</property>
+                    <value>0.59</value>
+                </greater-than-equals>
+                <greater-than-equals>
+                    <property>velocities/airspeed-kt</property>
+                    <value>278</value>
+                </greater-than-equals>
+            </or>
         </condition>
   <property>surface-positions/left-aileron-pos-norm</property>
   <factor> 10</factor>
@@ -1959,16 +1948,16 @@
   <type>rotate</type>
   <object-name>aileron_int_R</object-name>
         <condition>
-	    <or>
-            	<less-than>
-            	    <property>velocities/mach</property>
-            	    <value>0.59</value>
-            	</less-than>
-            	<less-than>
-            	    <property>velocities/airspeed-kt</property>
-            	    <value>278</value>
-            	</less-than>
-	    </or>
+            <or>
+                <less-than>
+                    <property>velocities/mach</property>
+                    <value>0.59</value>
+                </less-than>
+                <less-than>
+                    <property>velocities/airspeed-kt</property>
+                    <value>278</value>
+                </less-than>
+            </or>
         </condition>
   <property>surface-positions/left-aileron-pos-norm</property>
   <factor> 30</factor>
@@ -1985,16 +1974,16 @@
   <type>rotate</type>
   <object-name>aileron_int_R</object-name>
         <condition>
-	    <or>
-            	<greater-than-equals>
-            	    <property>velocities/mach</property>
-            	    <value>0.59</value>
-            	</greater-than-equals>
-            	<greater-than-equals>
-            	    <property>velocities/airspeed-kt</property>
-            	    <value>278</value>
-            	</greater-than-equals>
-	    </or>
+            <or>
+                <greater-than-equals>
+                    <property>velocities/mach</property>
+                    <value>0.59</value>
+                </greater-than-equals>
+                <greater-than-equals>
+                    <property>velocities/airspeed-kt</property>
+                    <value>278</value>
+                </greater-than-equals>
+            </or>
         </condition>
   <property>surface-positions/left-aileron-pos-norm</property>
   <factor> 10</factor>
@@ -2013,24 +2002,24 @@
   <type>rotate</type>
   <object-name>aileron_int_L</object-name>
   <property>surface-positions/flap-pos-norm</property>
-		  <interpolation>
-		    <entry>
-		      <ind>0.00</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.666</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.75</ind>
-		      <dep>5</dep>
-		    </entry>
-		    <entry>
-		      <ind>1.00</ind>
-		      <dep>15</dep>
-		    </entry>
-		  </interpolation>
+                  <interpolation>
+                    <entry>
+                      <ind>0.00</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.666</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.75</ind>
+                      <dep>5</dep>
+                    </entry>
+                    <entry>
+                      <ind>1.00</ind>
+                      <dep>15</dep>
+                    </entry>
+                  </interpolation>
   <axis>
      <x1-m> 6.280</x1-m>
      <y1-m>-12.850</y1-m>
@@ -2045,24 +2034,24 @@
   <type>rotate</type>
   <object-name>aileron_int_R</object-name>
   <property>surface-positions/flap-pos-norm</property>
-		  <interpolation>
-		    <entry>
-		      <ind>0.00</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.666</ind>
-		      <dep>0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind>0.75</ind>
-		      <dep>-5</dep>
-		    </entry>
-		    <entry>
-		      <ind>1.00</ind>
-		      <dep>-15</dep>
-		    </entry>
-		  </interpolation>
+                  <interpolation>
+                    <entry>
+                      <ind>0.00</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.666</ind>
+                      <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                      <ind>0.75</ind>
+                      <dep>-5</dep>
+                    </entry>
+                    <entry>
+                      <ind>1.00</ind>
+                      <dep>-15</dep>
+                    </entry>
+                  </interpolation>
   <axis>
      <x1-m> 6.280</x1-m>
      <y1-m> 12.850</y1-m>
@@ -2072,7 +2061,7 @@
      <z2-m> 0.000</z2-m>
   </axis>
  </animation>
-
+ 
  
 <!-- ############ -->
 <!--  Speedbrake  -->
@@ -2217,7 +2206,7 @@
 		     <z2-m>-2.48954</z2-m>
 		  </axis>
     </animation>
-     
+
 <!-- ########## -->
 <!-- Engine Fan -->
 <!-- ########## -->
@@ -2472,7 +2461,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rudder_1</object-name>
-  <property>surface-positions/rudder-pos-norm</property>
+  <property>controls/flight/rudder-pos</property>
   <factor>35</factor>
   <offset-deg>0</offset-deg>   
 	  <axis>
@@ -2491,7 +2480,7 @@
  <animation>
   <type>rotate</type>
   <object-name>elevator_right</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
+  <property>controls/flight/elevator-pos</property>
   <factor>10</factor>
   <offset-deg>0</offset-deg>   
 		  <axis>
@@ -2507,7 +2496,7 @@
  <animation>
   <type>rotate</type>
   <object-name>elevator_left</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
+  <property>controls/flight/elevator-pos</property>
   <factor>-10</factor>
   <offset-deg>0</offset-deg>
 		  <axis>
@@ -2523,6 +2512,7 @@
     <animation>
         <type>rotate</type>
 		<object-name>hstab_L</object-name>
+		<object-name>elevator_left</object-name>
         <property>controls/flight/elevator-trim</property>
         <factor>-15</factor>
 	  <offset-deg>0</offset-deg>   
@@ -2539,6 +2529,7 @@
     <animation>
         <type>rotate</type>
 		<object-name>hstab_R</object-name>
+		<object-name>elevator_right</object-name>
         <property>controls/flight/elevator-trim</property>
         <factor>15</factor>
 	  <offset-deg>0</offset-deg>   
@@ -2560,16 +2551,10 @@
 	<effect>
 		<name>Landing lightmap</name>
 		<inherits-from>Aircraft/747-8/Models/Effects/lightmap_fuselage</inherits-from>
-		<object-name>fuselage_1</object-name>
+		<object-name>fuselage</object-name>
 		<object-name>nosecone</object-name>
-         	<object-name>cargodoor1.001</object-name>
 		<object-name>vstab</object-name>
          	<object-name>rudder_1</object-name>
-		<object-name>VHFantenna</object-name>
-		<object-name>antenna2</object-name>
-		<object-name>antenna3</object-name>
-		<object-name>antenna_bot</object-name>
-		<object-name>satcom</object-name>
 		<object-name>NLG_L_lg</object-name>
 		<object-name>NLG_R_lg</object-name>
 		<object-name>NLG_L_sm</object-name>
@@ -2586,6 +2571,12 @@
 		<object-name>FLG_RR_out</object-name>
 		<object-name>FLG_RL_in</object-name>
 		<object-name>FLG_RL_out</object-name>
+         	<object-name>cargodoor1</object-name>
+		<object-name>VHFantenna</object-name>
+		<object-name>antenna2</object-name>
+		<object-name>antenna3</object-name>
+		<object-name>antenna_bot</object-name>
+		<object-name>satcom</object-name>
 	</effect>
 
 	<effect>
@@ -2630,7 +2621,7 @@
 		<object-name>flap_compart_RF_2</object-name>
 		<object-name>flap_compart_RB_2</object-name>
 		<object-name>flap_compart_RF_1</object-name>
-		<object-name>flap_compart_RB_1</object-name-->         
+		<object-name>flap_compart_RB_1</object-name-->
 		<object-name>hstab_L</object-name>
 		<object-name>elevator_left</object-name>
 		<object-name>hstab_R</object-name>
@@ -2672,12 +2663,6 @@
     <type>noshadow</type>
     <object-name>cabinlighting</object-name>
     <object-name>cabinwindows</object-name>
-	<condition>
-		<not>
-			<property>sim/model/livery/config</property>
-			<value>1</value>
-		</not>
-	</condition>
   </animation>
   
     <animation>
@@ -2685,7 +2670,7 @@
         <object-name>cabinlighting</object-name>
         <condition>
                 <greater-than>
-                    <property>/sim/time/sun-angle-rad</property>
+                    <property>sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
         </condition>
@@ -2695,7 +2680,7 @@
         <object-name>cabinwindows</object-name>
         <condition>
                 <less-than>
-                    <property>/sim/time/sun-angle-rad</property>
+                    <property>sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </less-than>
         </condition>
@@ -2748,6 +2733,7 @@
 		<z-m> -1.36293</z-m>
 	</offsets>
 </model>
+
 
 <!-- ############ -->
 <!-- Fuel Dumping -->
