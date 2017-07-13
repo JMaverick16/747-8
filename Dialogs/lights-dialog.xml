@@ -6,27 +6,21 @@
 
   <layout>vbox</layout>
 
-
-
   <text>
 
-    <label>Lights</label>
+    <label>747-8 Light Controller</label>
 
     <valign>center</valign>
     <halign>center</halign>
   </text>
 
-
-
   <hrule/>
 
-  
   <!-- Grupo geral -->
   <group>
     <layout>hbox</layout>
     <halign>center</halign>
     <valign>top</valign>  
-
 
 		  <group>
 
@@ -41,9 +35,6 @@
 		      <label> </label>
 
 		    </text>
-
-		
-
 
 		    <checkbox>
 
@@ -77,36 +68,7 @@
 		    </checkbox>
 
 		
-		    <!--checkbox>
-		      <halign>left</halign>
-		      <label>Left Landing light</label>
-		      <property>controls/lighting/landing-lights[1]</property>
-		      <binding>
-		        <command>property-toggle</command>
-		        <property>controls/lighting/landing-lights[1]</property>
-		      </binding>
-		      <binding>
-		        <command>property-toggle</command>
-		        <property>/sim/sound/switch</property>
-		      </binding>
-		    </checkbox>
-		    
-		    <checkbox>
-		      <halign>left</halign>
-		      <label>Right Landing light</label>
-		      <property>controls/lighting/landing-lights[2]</property>
-		      <binding>
-		        <command>property-toggle</command>
-		        <property>controls/lighting/landing-lights[2]</property>
-		      </binding>
-		      <binding>
-		        <command>property-toggle</command>
-		        <property>/sim/sound/switch</property>
-		      </binding>
-		    </checkbox-->
-		
-
-		    <checkbox>
+		   <checkbox>
 
 		      <halign>left</halign>
 
@@ -129,7 +91,6 @@
 
 		    </checkbox>
 
-		    
 		   <checkbox>
 		      <halign>left</halign>
 		      <label>Beacon</label>
@@ -241,10 +202,7 @@
 		        </binding>
 		      </slider>
 		
-		
-
 		  </group>
-
 
 		  <group>
 		    <layout>vbox</layout>
@@ -302,15 +260,11 @@
   
   <hrule/>
 
-
-
   <group>
 
     <layout>hbox</layout>
 
     <empty><stretch>true</stretch></empty>
-
-
 
     <button>
 
@@ -328,12 +282,9 @@
 
     </button>
 
-
-
     <empty><stretch>true</stretch></empty>
 
   </group>
-
 
 
 </PropertyList>

@@ -665,7 +665,7 @@
                 </category-13>
             </configuration-module>
             <voice>
-                <file-prefix type="string">Sounds/mk-viii/</file-prefix>
+                <file-prefix type="string">Aircraft/747-8/Nasal/Sounds/GPWS/</file-prefix>
             </voice>
             <inputs>                            <!-- Module I/O -->
                 <arinc429>
