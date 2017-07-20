@@ -5,15 +5,15 @@
     <model>
 			<livery>
 				<name type="string">Boeing</name>
-				<texture>../Liveries/748I/BOE_fuselage.png</texture>
+				<texture>Liveries/748I/BOE_fuselage.png</texture>
 			</livery>
 			<turbofans>
 				<name type="string">Boeing</name>
-				<texture>../Liveries/748I/turbofan.png</texture>
+				<texture>Liveries/748I/turbofan.png</texture>
 			</turbofans>
 			<wings>
 				<name type="string">Boeing</name>
-				<texture>../Liveries/748I/wings.png</texture>
+				<texture>Liveries/748I/wings.png</texture>
 			</wings>
     </model>
 </sim>
